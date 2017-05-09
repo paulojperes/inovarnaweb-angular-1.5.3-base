@@ -1,0 +1,14 @@
+<a ui-sref="newCategoria" class="btn-primary btn-lg nodecoration">Cadastrar uma nova categoria</a>
+<table class="table movietable">
+    <tr>
+        <td><h3>Todas as Categorias</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="categoria in categorias">
+        <td>{{categoria.nome}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewCategoria({id:categoria.id})">Editar</a>
+            <a class="btn btn-danger"  ng-click="deleteCategoria(categoria)">Apagar</a>
+        </td>
+    </tr>
+</table>
